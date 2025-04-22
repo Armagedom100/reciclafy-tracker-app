@@ -1,9 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Layout } from "@/components/Layout";
 import { recyclafyAPI } from "@/services/recyclafyAPI";
-import { LineChart, RecyclingBin, Trash2, Upload } from "lucide-react";
+import { LineChart, Recycle, Trash2, Upload } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -53,7 +52,7 @@ const Index = () => {
           <Card>
             <CardHeader>
               <div className="bg-muted w-12 h-12 flex items-center justify-center rounded-lg mb-4">
-                <RecyclingBin size={24} className="text-recyclafy-leaf-green" />
+                <Recycle size={24} className="text-recyclafy-leaf-green" />
               </div>
               <CardTitle>Entregas Registradas</CardTitle>
               <CardDescription>
@@ -137,7 +136,7 @@ const Index = () => {
           </p>
           <div className="flex flex-wrap gap-3">
             <Button variant="secondary" onClick={handleAddDemoData}>
-              <RecyclingBin size={16} className="mr-2" />
+              <Recycle size={16} className="mr-2" />
               Adicionar Dados de Demonstração
             </Button>
             <Button variant="outline" onClick={handleClearData}>

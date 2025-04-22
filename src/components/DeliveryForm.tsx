@@ -5,7 +5,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { MaterialType, RecyclingMaterial, WeightUnit } from "@/types/recycling";
+import { MaterialType, RecyclingDelivery, WeightUnit } from "@/types/recycling";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Plus, Save, Trash2 } from "lucide-react";
 import { useForm } from "react-hook-form";
@@ -106,7 +106,7 @@ export default function DeliveryForm() {
   const onSubmit = async (data: DeliveryFormValues) => {
     try {
       setIsSubmitting(true);
-      await recyclafyAPI.submitDelivery(data);
+      await recyclafyAPI.submitDelivery(data as RecyclingDelivery);
       toast.success("Entrega registrada com sucesso!");
       // Reset form
       form.reset({
