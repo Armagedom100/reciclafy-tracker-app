@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom recyclafy colors
+				recyclafy: {
+					'leaf-green': '#4CAF50',
+					'light-green': '#8BC34A',
+					'water-blue': '#03A9F4',
+					'sky-blue': '#B3E5FC',
+					'earth-brown': '#795548',
+					'accent-green': '#76FF03',
+					'accent-blue': '#29B6F6',
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,16 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'leaf-float': {
+					'0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+					'50%': { transform: 'translateY(-10px) rotate(5deg)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'leaf-float': 'leaf-float 3s ease-in-out infinite',
 			}
 		}
 	},
